@@ -1,4 +1,6 @@
 const $btn = document.getElementById('btn-kick');
+const $btn = document.getElementById('btn-fireball');
+
 
 const character = {
     name: 'Pikachu',
@@ -46,7 +48,7 @@ function changeHP(count, person) {
     if (person.damageHP < count) {
         person.damageHP = 0;
         alert('Бедный ' + person.name + ' проиграл бой!');
-        $btn.disabled = true;
+        $btn.disabled = true
     } else {
         person.damageHP -= count;
     }
