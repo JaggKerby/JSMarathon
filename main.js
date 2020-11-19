@@ -1,5 +1,5 @@
 const $btn = document.getElementById('btn-kick');
-const $btn = document.getElementById('btn-fireball');
+const $btn2 = document.getElementById('btn-fireball');
 
 
 const character = {
@@ -21,8 +21,14 @@ const enemy = {
 
 $btn.addEventListener('click', function(){
     console.log('kick');
-    changeHP(random(20), character);
-    changeHP(random(20), enemy);
+    changeHP(random(10), character);
+    changeHP(random(25), enemy);
+});
+
+$btn2.addEventListener('click', function(){
+    console.log('kick');
+    changeHP(random(25), character);
+    changeHP(random(10), enemy);
 });
 
 function init() {
