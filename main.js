@@ -21,14 +21,12 @@ const enemy = {
 
 $btn.addEventListener('click', function(){
     console.log('kick');
-    changeHP(random(10), character);
     changeHP(random(25), enemy);
 });
 
 $btn2.addEventListener('click', function(){
     console.log('kick');
     changeHP(random(25), character);
-    changeHP(random(10), enemy);
 });
 
 function init() {
@@ -54,7 +52,8 @@ function changeHP(count, person) {
     if (person.damageHP < count) {
         person.damageHP = 0;
         alert('Бедный ' + person.name + ' проиграл бой!');
-        $btn.disabled = true
+        $btn.disabled = true;
+        $btn2.disabled = true;
     } else {
         person.damageHP -= count;
     }
